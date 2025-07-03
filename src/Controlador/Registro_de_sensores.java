@@ -4,9 +4,9 @@ import Modelo.ConexionSQL;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class Gestion_de_sensores {
+public class Registro_de_sensores {
     
-    public static void agregarSensor(String tipo, int numSensor, double fechaInicio, double fechaRevision) {
+    public static void agregarSensor(String tipo, int numSensor, Double fechaInicio, Double fechaRevision) {
         String sql = "INSERT INTO sensores (tipo_sensor, num_sensor, fecha_inicio, fecha_revision) VALUES (?, ?, ?, ?)";
         
         try (Connection conn = ConexionSQL.getConnection();
